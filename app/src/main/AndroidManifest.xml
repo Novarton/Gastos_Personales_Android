@@ -23,6 +23,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".activities.HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".auth.PinActivity"
             android:exported="false" />
     </application>

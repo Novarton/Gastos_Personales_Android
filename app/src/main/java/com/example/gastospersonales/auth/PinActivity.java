@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 
 import com.example.gastospersonales.R;
+import com.example.gastospersonales.activities.HomeActivity;
 import com.example.gastospersonales.activities.MainActivity;
 
 public class PinActivity extends AppCompatActivity {
@@ -43,12 +44,13 @@ public class PinActivity extends AppCompatActivity {
 
         if (pinGuardado == null) {
             Toast.makeText(this, "No hay PIN guardado. Debes configurarlo primero.", Toast.LENGTH_LONG).show();
-            // Aquí podrías redirigir a SetPinActivity
-            return;
+            Intent intent = new Intent(this, SetPinActivity.class);
+            startActivity(intent);
+            finish();
         }
 
         if (pinIngresado.equals(pinGuardado)) {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, HomeActivity.class);
             startActivity(intent);
             finish();
         } else {

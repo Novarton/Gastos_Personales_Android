@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
         SharedPreferences prefs = getSharedPreferences("gastos_prefs", Context.MODE_PRIVATE);
         String pin = prefs.getString("clave_pin", null);

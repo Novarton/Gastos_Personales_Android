@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/saldoTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Saldo Total: $0.00"
+        android:textSize="24sp"
+        android:textColor="#222"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnAgregarMovimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar Movimiento"/>
+
+    <Button
+        android:id="@+id/btnVerHistorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Historial"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/btnPresupuesto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Presupuesto Mensual"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/btnCategorias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Categorías"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>
