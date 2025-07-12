@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="orange">#E3823C</color>
+    <color name="barra">#09081C</color>
+    <color name="cuadro">#262450</color>
+    <color name="backgroundDark">#121212</color>
+    <color name="cardDark">#2A1D41</color>
+    <color name="ingresosColor">#FF5B2E</color>
+    <color name="gastosColor">#FFAC33</color>
 </resources>
+
