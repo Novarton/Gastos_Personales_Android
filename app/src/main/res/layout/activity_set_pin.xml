@@ -7,25 +7,35 @@
     android:gravity="center"
     android:background="@drawable/gradient_background">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Establecer Pin"
-        android:textSize="28sp"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="48dp"
-        android:textStyle="bold"/>
-
 
     <EditText
+        android:id="@+id/newPinInput"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:inputType="numberPassword"
+        android:hint="Nuevo PIN"
         android:maxLength="4"
         android:textSize="24sp"
         android:letterSpacing="0.2"
         android:gravity="center"
         android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="48dp"
+        android:backgroundTint="#FFFFFF"
+        android:transformationMethod="PasswordTransformationMethod"/>
+
+    <EditText
+        android:id="@+id/confirmInput"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:inputType="numberPassword"
+        android:hint="Confirmar PIN"
+        android:maxLength="4"
+        android:textSize="24sp"
+        android:letterSpacing="0.2"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         android:layout_marginBottom="48dp"
         android:backgroundTint="#FFFFFF"
         android:transformationMethod="PasswordTransformationMethod"/>
