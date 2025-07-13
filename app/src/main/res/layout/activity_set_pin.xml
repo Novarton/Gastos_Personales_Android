@@ -152,7 +152,7 @@
             android:layout_height="80dp"
             android:layout_columnWeight="1"
             android:gravity="center"
-            android:text="<--|"
+            android:text="Enter"
             android:textSize="32sp"
             android:textColor="#FFFFFF"/>
 
