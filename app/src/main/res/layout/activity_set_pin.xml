@@ -22,8 +22,7 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:layout_marginBottom="48dp"
-        android:backgroundTint="#FFFFFF"
-        android:transformationMethod="PasswordTransformationMethod"/>
+        android:backgroundTint="#FFFFFF" />
 
     <EditText
         android:id="@+id/confirmInput"
@@ -39,8 +38,7 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:layout_marginBottom="48dp"
-        android:backgroundTint="#FFFFFF"
-        android:transformationMethod="PasswordTransformationMethod"/>
+        android:backgroundTint="#FFFFFF" />
 
     <GridLayout
         android:layout_width="match_parent"
