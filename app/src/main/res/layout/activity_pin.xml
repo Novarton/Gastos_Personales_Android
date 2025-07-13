@@ -7,20 +7,14 @@
     android:gravity="center"
     android:background="@drawable/gradient_background">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contraseña"
-        android:textSize="28sp"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="48dp"
-        android:textStyle="bold"/>
-
 
     <EditText
+        android:id="@+id/pinInput"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:inputType="numberPassword"
+        android:hint="PIN"
+        android:textColorHint="#FFFFFF"
         android:maxLength="4"
         android:textSize="24sp"
         android:letterSpacing="0.2"
@@ -145,5 +139,18 @@
             android:textColor="#FFFFFF"/>
 
     </GridLayout>
+
+    <Button
+        android:id="@+id/guardarPinBtn"
+        android:layout_width="167dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_button"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:text="Ingresar"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 </LinearLayout>
