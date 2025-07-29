@@ -2,37 +2,46 @@ package com.example.gastospersonales.models;
 
 public class Transaccion {
     private int id;
-    private String tipo; // "ingreso" o "egreso"
-    private double monto;
-    private String categoria;
-    private String descripcion;
-    private String fecha;
+    private String type; // "Ingreso" o "Gasto"
+    private double amount;
+    private String category;
+    private String paymentMethod;
+    private String description;
+    private String timestamp; // Formato "YYYY-MM-DD HH:MM:SS"
 
-    public Transaccion(int id, String tipo, double monto, String categoria, String descripcion, String fecha) {
+    public Transaccion(int id, String type, double amount, String category, String paymentMethod, String description, String timestamp) {
         this.id = id;
-        this.tipo = tipo;
-        this.monto = monto;
-        this.categoria = categoria;
-        this.descripcion = descripcion;
-        this.fecha = fecha;
+        this.type = type;
+        this.amount = amount;
+        this.category = category;
+        this.paymentMethod = paymentMethod;
+        this.description = description;
+        this.timestamp = timestamp;
     }
 
-    public Transaccion(String tipo, double monto, String categoria, String descripcion, String fecha) {
-        this(-1, tipo, monto, categoria, descripcion, fecha);
+    // Constructor sin ID (para nuevas transacciones antes de insertarlas)
+    public Transaccion(String type, double amount, String category, String paymentMethod, String description, String timestamp) {
+        this.type = type;
+        this.amount = amount;
+        this.category = category;
+        this.paymentMethod = paymentMethod;
+        this.description = description;
+        this.timestamp = timestamp;
     }
 
-    // Getters y Setters
+    // Getters y Setters (genera todos)
     public int getId() { return id; }
-    public String getTipo() { return tipo; }
-    public double getMonto() { return monto; }
-    public String getCategoria() { return categoria; }
-    public String getDescripcion() { return descripcion; }
-    public String getFecha() { return fecha; }
-
     public void setId(int id) { this.id = id; }
-    public void setTipo(String tipo) { this.tipo = tipo; }
-    public void setMonto(double monto) { this.monto = monto; }
-    public void setCategoria(String categoria) { this.categoria = categoria; }
-    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
-    public void setFecha(String fecha) { this.fecha = fecha; }
+    public String getType() { return type; }
+    public void setType(String type) { this.type = type; }
+    public double getAmount() { return amount; }
+    public void setAmount(double amount) { this.amount = amount; }
+    public String getCategory() { return category; }
+    public void setCategory(String category) { this.category = category; }
+    public String getPaymentMethod() { return paymentMethod; }
+    public void setPaymentMethod(String paymentMethod) { this.paymentMethod = paymentMethod; }
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
+    public String getTimestamp() { return timestamp; }
+    public void setTimestamp(String timestamp) { this.timestamp = timestamp; }
 }

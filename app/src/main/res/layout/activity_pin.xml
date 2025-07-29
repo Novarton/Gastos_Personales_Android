@@ -140,7 +140,7 @@
     </GridLayout>
 
     <Button
-        android:id="@+id/guardarPinBtn"
+        android:id="@+id/ingresarBtn"
         android:layout_width="167dp"
         android:layout_height="80dp"
         android:layout_marginTop="16dp"

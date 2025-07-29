@@ -2,11 +2,7 @@ package com.example.gastospersonales.auth;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,7 +12,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.gastospersonales.R;
-import com.example.gastospersonales.auth.PinActivity;
 
 public class SetPinActivity extends AppCompatActivity {
 
@@ -31,7 +26,7 @@ public class SetPinActivity extends AppCompatActivity {
 
         newPinInput = findViewById(R.id.newPinInput);
         confirmPinInput = findViewById(R.id.confirmPinInput);
-        guardarPinBtn = findViewById(R.id.guardarPinBtn);
+        guardarPinBtn = findViewById(R.id.ingresarBtn);
         prefs = getSharedPreferences("gastos_prefs", Context.MODE_PRIVATE);
 
         guardarPinBtn.setOnClickListener(v -> guardarPin());
