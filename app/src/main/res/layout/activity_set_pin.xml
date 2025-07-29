@@ -25,7 +25,7 @@
         android:backgroundTint="#FFFFFF" />
 
     <EditText
-        android:id="@+id/confirmInput"
+        android:id="@+id/confirmPinInput"
         android:layout_width="220dp"
         android:layout_height="60dp"
         android:inputType="numberPassword"
@@ -157,7 +157,7 @@
     </GridLayout>
 
     <Button
-        android:id="@+id/guardarPinBtn"
+        android:id="@+id/ingresarBtn"
         android:layout_width="167dp"
         android:layout_height="80dp"
         android:layout_marginTop="16dp"

@@ -12,7 +12,7 @@ import java.util.List;
 
 public class TransaccionRepository {
 
-    private DBHelper dbHelper;
+   /* private DBHelper dbHelper;
 
     public TransaccionRepository(Context context) {
         dbHelper = new DBHelper(context);
@@ -70,5 +70,5 @@ public class TransaccionRepository {
         egresosCursor.close();
 
         return ingresos - egresos;
-    }
+    }*/
 }

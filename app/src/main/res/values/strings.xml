@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Gastos Personales</string>
+    <string name="description_add_transaction">Add new transaction</string>
+
+    <string-array name="categories_array">
+        <item>Selecciona una categoría</item>
+        <item>Comida</item>
+        <item>Transporte</item>
+        <item>Vivienda</item>
+        <item>Entretenimiento</item>
+        <item>Educación</item>
+        <item>Salud</item>
+        <item>Otros</item>
+    </string-array>
+
+    <string-array name="payment_methods_array">
+        <item>Selecciona método de pago</item>
+        <item>Efectivo</item>
+        <item>Tarjeta de Crédito</item>
+        <item>Tarjeta de Débito</item>
+        <item>Transferencia</item>
+    </string-array>
 </resources>
