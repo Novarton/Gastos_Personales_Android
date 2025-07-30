@@ -44,7 +44,6 @@ public class TransaccionActivity extends AppCompatActivity {
         spinnerPaymentMethod = findViewById(R.id.spinnerPaymentMethod);
         etAmount = findViewById(R.id.etAmount);
         etDescription = findViewById(R.id.etDescription);
-        btnClose = findViewById(R.id.btnClose);
 
         dbHelper = new DBHelper(this);
         calendar = Calendar.getInstance(); // Inicializar el calendario con la fecha y hora actuales
@@ -67,7 +66,7 @@ public class TransaccionActivity extends AppCompatActivity {
         btnIncome.setOnClickListener(v -> {
             transactionType = "Ingreso";
             btnIncome.setBackgroundResource(R.drawable.button_selected_background);
-            btnExpense.setBackgroundResource(R.drawable.button_unselected_background);
+            btnExpense.setBackgroundResource(R.drawable.button_save_background);
         });
 
         btnExpense.setOnClickListener(v -> {
@@ -79,8 +78,6 @@ public class TransaccionActivity extends AppCompatActivity {
         tvTransactionDate.setOnClickListener(v -> showDateTimeDialog());
 
         btnSaveTransaction.setOnClickListener(v -> saveTransaction());
-
-        btnClose.setOnClickListener(v -> finish()); // Cierra la actividad al presionar la 'X'
     }
     private void updateDateTimeDisplay() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm a | dd MMM, yyyy", Locale.getDefault());
