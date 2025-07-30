@@ -67,7 +67,7 @@
             android:background="@android:color/transparent"/>
     </LinearLayout>
 
-    <!-- CARD 2 - Categoría (Dropdown) -->
+    <!-- CARD 2 - Categoría (Dropdown personalizado) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -164,3 +164,4 @@
     </LinearLayout>
 
 </LinearLayout>
+

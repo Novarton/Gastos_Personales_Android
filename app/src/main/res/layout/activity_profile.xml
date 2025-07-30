@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient"
+    android:background="@drawable/gradient_background"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -35,20 +35,26 @@
             android:orientation="vertical">
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
                 android:text="VGEKS"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
+                android:layout_width="148dp"
+                android:layout_height="100px"
                 android:text="+52 XXXXX XXXX"
                 android:textColor="@color/white"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:text="VGEKS_LAB@xxxxx"
                 android:textColor="@color/white"
-                android:textSize="14sp"/>
+                android:textSize="14sp"
+                android:layout_height="100px"
+                android:layout_width="100px"/>
         </LinearLayout>
 
         <ImageView
@@ -67,10 +73,12 @@
         android:layout_marginTop="32dp">
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="100px"
             android:text="Cambiar PIN"
             android:textColor="@color/white"
             android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
             android:layout_width="match_parent"
@@ -98,18 +106,18 @@
             android:layout_height="wrap_content"
             android:text="Guardar"
             android:layout_gravity="center"
-            android:textColor="@color/dark_background"
-            android:backgroundTint="@color/highlight_yellow"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_blue"
             android:layout_marginTop="16dp"/>
     </LinearLayout>
 
     <!-- Cerrar Sesión -->
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cerrar Sesión"
-        android:textColor="@color/red"
         android:layout_gravity="center"
-        android:layout_marginTop="32dp"
-        android:textSize="16sp"/>
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/red"
+        android:text="Cerrar Sesión"
+        android:textColor="@color/white"/>
 </LinearLayout>
