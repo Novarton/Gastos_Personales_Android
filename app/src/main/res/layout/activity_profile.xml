@@ -1,0 +1,123 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Perfil"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"/>
+
+    <!-- Profile Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:elevation="6dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:text="VGEKS"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="148dp"
+                android:layout_height="100px"
+                android:text="+52 XXXXX XXXX"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="VGEKS_LAB@xxxxx"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_height="100px"
+                android:layout_width="100px"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_chart"
+            android:background="@drawable/circle_border"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <!-- Formulario de PIN -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="100px"
+            android:text="Cambiar PIN"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PIN Actual"
+            android:inputType="numberPassword"
+            style="@style/CustomEditText"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PIN Nueva"
+            android:inputType="numberPassword"
+            style="@style/CustomEditText"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirmar PIN"
+            android:inputType="numberPassword"
+            style="@style/CustomEditText"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_blue"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+
+    <!-- Cerrar Sesión -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/red"
+        android:text="Cerrar Sesión"
+        android:textColor="@color/white"/>
+</LinearLayout>

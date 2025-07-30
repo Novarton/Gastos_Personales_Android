@@ -14,5 +14,11 @@
     <color name="cardDark">#2A1D41</color>
     <color name="ingresosColor">#FF5B2E</color>
     <color name="gastosColor">#FFAC33</color>
+    <color name="dark_background">#0B0C2A</color>
+    <color name="gradient_red">#701F37</color>
+    <color name="gradient_blue">#202040</color>
+    <color name="dark_blue">#151552</color>
+    <color name="highlight_yellow">#F4C542</color>
+    <color name="red">#FF3B30</color>
 </resources>
 

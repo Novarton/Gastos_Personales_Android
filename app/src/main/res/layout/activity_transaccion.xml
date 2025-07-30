@@ -1,163 +1,167 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1C1C2B" tools:context=".activities.TransaccionActivity">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/gradient_background">
 
-    <ImageButton
-        android:id="@+id/btnClose"
+    <!-- Botón de cierre (X) -->
+    <TextView
+        android:id="@+id/close_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="89dp"
-        android:layout_marginEnd="10dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="Cerrar"
-        android:padding="8dp"
-        android:src="@drawable/ic_close" />
+        android:text="✕"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="end"
+        android:padding="8dp"/>
 
-    <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/btnClose"
-    android:layout_margin="16dp"
-    android:background="@drawable/card_background"
-    android:orientation="vertical"
-    android:padding="16dp">
-
+    <!-- Tabs de INGRESOS / GASTOS -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="2">
+        android:gravity="center"
+        android:layout_marginTop="8dp">
 
         <Button
-            android:id="@+id/btnIncome"
+            android:id="@+id/btn_ingresos"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:text="INGRESOS"
-            android:textColor="@color/white"
-            android:background="@drawable/button_selected_background"
-            android:layout_marginEnd="4dp" />
+            android:backgroundTint="@color/ingresosColor"
+            android:textColor="@android:color/white"/>
 
         <Button
-            android:id="@+id/btnExpense"
+            android:id="@+id/btn_gastos"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:text="GASTOS"
-            android:textColor="@color/white"
-            android:background="@drawable/button_unselected_background"
-            android:layout_marginStart="4dp" />
+            android:backgroundTint="@color/gastosColor"
+            android:textColor="@android:color/white"/>
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TRANSACCIÓN"
-        android:textColor="@color/white"
-        android:layout_marginTop="16dp" />
-
-    <TextView
-        android:id="@+id/tvTransactionDate"
+    <!-- CARD 1 - Transacción -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2:05 p.m. | 01 Sep, 2025"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:padding="8dp"
-        android:background="@drawable/input_background"
-        android:clickable="true"
-        android:focusable="true"
-        android:drawableEnd="@drawable/ic_calendar"
-        android:onClick="showDatePickerDialog"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CATEGORÍA"
-        android:textColor="@color/white"
-        android:layout_marginTop="16dp" />
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginTop="16dp">
 
-    <Spinner
-        android:id="@+id/spinnerCategory"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TRANSACCIÓN"
+            android:textColor="@android:color/white"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="2:05 p.m. | 01 Sep, 2025"
+            android:textColorHint="#CCCCCC"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <!-- CARD 2 - Categoría (Dropdown personalizado) -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:entries="@array/categories_array"
-        android:background="@drawable/input_background"
-        android:popupBackground="@color/white"
-        android:textColor="@color/white"
-        android:spinnerMode="dropdown"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CANTIDAD"
-        android:textColor="@color/white"
-        android:layout_marginTop="16dp" />
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginTop="8dp">
 
-    <EditText
-        android:id="@+id/etAmount"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CATEGORÍA"
+            android:textColor="@android:color/white"/>
+
+        <Spinner
+            android:id="@+id/spinner_categoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:popupBackground="@color/cardDark"
+            android:backgroundTint="@android:color/white"/>
+    </LinearLayout>
+
+    <!-- CARD 3 - Cantidad -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="$0.00"
-        android:inputType="numberDecimal"
-        android:textColor="@color/white"
-        android:textColorHint="#99FFFFFF"
-        android:background="@drawable/input_background"
-        android:padding="8dp"
-        />
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginTop="8dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MÉTODO DE PAGO"
-        android:textColor="@color/white"
-        android:layout_marginTop="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CANTIDAD"
+            android:textColor="@android:color/white"/>
 
-    <Spinner
-        android:id="@+id/spinnerPaymentMethod"
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="$235"
+            android:textColorHint="#CCCCCC"
+            android:textColor="@android:color/white"
+            android:inputType="number"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <!-- CARD 4 - Método de pago -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:entries="@array/payment_methods_array"
-        android:background="@drawable/input_background"
-        android:popupBackground="@color/white"
-        android:spinnerMode="dropdown"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DESCRIPCIÓN"
-        android:textColor="@color/white"
-        android:layout_marginTop="16dp" />
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginTop="8dp">
 
-    <EditText
-        android:id="@+id/etDescription"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MÉTODO DE PAGO"
+            android:textColor="@android:color/white"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Efectivo"
+            android:textColorHint="#CCCCCC"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <!-- CARD 5 - Descripción -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Comida de la semana"
-        android:inputType="textCapSentences"
-        android:textColor="@color/white"
-        android:textColorHint="#99FFFFFF"
-        android:background="@drawable/input_background"
-        android:padding="8dp"
-        android:maxLines="3"
-        />
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        android:layout_marginTop="8dp">
 
-    <Button
-        android:id="@+id/btnSaveTransaction"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="GUARDAR TRANSACCIÓN"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/button_save_background"
-        android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DESCRIPCIÓN"
+            android:textColor="@android:color/white"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Comida de la semana"
+            android:textColorHint="#CCCCCC"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
 
 </LinearLayout>
 
-</RelativeLayout>
