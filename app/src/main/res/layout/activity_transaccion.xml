@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1C2B" tools:context=".activities.TransaccionActivity">
+
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Cerrar"
+        android:padding="8dp"
+        android:src="@drawable/ic_close" />
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/btnClose"
+    android:layout_margin="16dp"
+    android:background="@drawable/card_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnIncome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="INGRESOS"
+            android:textColor="@color/white"
+            android:background="@drawable/button_selected_background"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnExpense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="GASTOS"
+            android:textColor="@color/white"
+            android:background="@drawable/button_unselected_background"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TRANSACCIÓN"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvTransactionDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2:05 p.m. | 01 Sep, 2025"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:padding="8dp"
+        android:background="@drawable/input_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:drawableEnd="@drawable/ic_calendar"
+        android:onClick="showDatePickerDialog"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CATEGORÍA"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:entries="@array/categories_array"
+        android:background="@drawable/input_background"
+        android:popupBackground="@color/white"
+        android:textColor="@color/white"
+        android:spinnerMode="dropdown"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CANTIDAD"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="$0.00"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="#99FFFFFF"
+        android:background="@drawable/input_background"
+        android:padding="8dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MÉTODO DE PAGO"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spinnerPaymentMethod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:entries="@array/payment_methods_array"
+        android:background="@drawable/input_background"
+        android:popupBackground="@color/white"
+        android:spinnerMode="dropdown"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DESCRIPCIÓN"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Comida de la semana"
+        android:inputType="textCapSentences"
+        android:textColor="@color/white"
+        android:textColorHint="#99FFFFFF"
+        android:background="@drawable/input_background"
+        android:padding="8dp"
+        android:maxLines="3"
+        />
+
+    <Button
+        android:id="@+id/btnSaveTransaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GUARDAR TRANSACCIÓN"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_save_background"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
+
+</RelativeLayout>
