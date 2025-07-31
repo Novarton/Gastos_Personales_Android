@@ -1,123 +1,155 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    android:orientation="vertical"
-    android:padding="16dp">
+    tools:context=".activities.ProfileActivity">
 
-    <!-- Header -->
-    <TextView
-        android:id="@+id/title"
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Perfil"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:gravity="center"
-        android:layout_marginTop="16dp"
-        android:textStyle="bold"/>
-
-    <!-- Profile Card -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal"
-        android:background="@drawable/card_background"
-        android:padding="16dp"
-        android:layout_marginTop="24dp"
-        android:gravity="center_vertical"
-        android:elevation="6dp">
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="20dp">
 
+            <!-- Header -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100px"
-                android:text="VGEKS"
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Perfil"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="148dp"
-                android:layout_height="100px"
-                android:text="+52 XXXXX XXXX"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
+            <!-- Profile Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/card_background"
+                android:padding="16dp"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:elevation="6dp">
 
-            <TextView
-                android:text="VGEKS_LAB@xxxxx"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:layout_height="100px"
-                android:layout_width="100px"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VGEKS"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+52 XXXXX XXXX"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VGEKS_LAB@xxxxx"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_chart"
+                    android:background="@drawable/circle_border"
+                    android:padding="8dp" />
+            </LinearLayout>
+
+            <!-- Formulario de PIN -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cambiar PIN"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="PIN Actual"
+                    android:inputType="numberPassword"
+                    style="@style/CustomEditText" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="PIN Nueva"
+                    android:inputType="numberPassword"
+                    style="@style/CustomEditText" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Confirmar PIN"
+                    android:inputType="numberPassword"
+                    style="@style/CustomEditText" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guardar"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/dark_blue"
+                    android:layout_marginTop="16dp" />
+            </LinearLayout>
+
+            <!-- Botón Cerrar Sesión -->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/red"
+                android:text="Cerrar Sesión"
+                android:textColor="@color/white" />
+
         </LinearLayout>
+    </ScrollView>
 
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_chart"
-            android:background="@drawable/circle_border"
-            android:padding="8dp"/>
-    </LinearLayout>
-
-    <!-- Formulario de PIN -->
-    <LinearLayout
+    <!-- Barra de navegación inferior -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="32dp">
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/bottom_nav_item_color"
+        app:itemTextColor="@color/bottom_nav_item_color"
+        android:background="#2A2A46" />
+</RelativeLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="100px"
-            android:text="Cambiar PIN"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="PIN Actual"
-            android:inputType="numberPassword"
-            style="@style/CustomEditText"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="PIN Nueva"
-            android:inputType="numberPassword"
-            style="@style/CustomEditText"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Confirmar PIN"
-            android:inputType="numberPassword"
-            style="@style/CustomEditText"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Guardar"
-            android:layout_gravity="center"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/dark_blue"
-            android:layout_marginTop="16dp"/>
-    </LinearLayout>
-
-    <!-- Cerrar Sesión -->
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/red"
-        android:text="Cerrar Sesión"
-        android:textColor="@color/white"/>
-</LinearLayout>
