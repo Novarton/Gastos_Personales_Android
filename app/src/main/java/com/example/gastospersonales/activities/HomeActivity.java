@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.gastospersonales.R;
+import com.example.gastospersonales.auth.SetPinActivity;
 import com.example.gastospersonales.database.DBHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -69,6 +70,8 @@ public class HomeActivity extends AppCompatActivity {
             } else if (item.getItemId() == R.id.nav_profile) {
                 Toast.makeText(HomeActivity.this, "Navegar a Perfil", Toast.LENGTH_SHORT).show();
                 // Aquí podrías iniciar una nueva actividad de Perfil
+                startActivity(new Intent(this, ProfileActivity.class));
+
                 return true;
             }
             return false;
@@ -106,6 +109,7 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
+
     private void updateTotalBalance() {
         double total = dbHelper.getTotalBalance();
         tvTotalBalance.setText(String.format(Locale.getDefault(), "$%,.2f", total)); // Formato de moneda
@@ -116,4 +120,6 @@ public class HomeActivity extends AppCompatActivity {
             tvTotalBalance.setTextColor(Color.parseColor("#00FFFF")); // Cian de tu imagen
         }
     }
+
+
 }

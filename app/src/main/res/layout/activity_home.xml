@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1C1C2B"
-    tools:context=".MainActivity">
+    tools:context=".activities.HomeActivity">
 
     <LinearLayout
         android:id="@+id/headerLayout"
@@ -68,7 +68,9 @@
         android:focusable="true"
         android:src="@drawable/ic_add"
         app:backgroundTint="#FF6347"
-        app:tint="@android:color/white" /> <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:tint="@android:color/white" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
     android:id="@+id/bottom_navigation"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"

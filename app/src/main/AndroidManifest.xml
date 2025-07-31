@@ -30,6 +30,8 @@
             android:exported="false" />
         <activity android:name=".activities.TransaccionActivity"
             android:exported="false"/>
+        <activity android:name=".activities.ProfileActivity"
+            android:exported="false"/>
 
     </application>
 

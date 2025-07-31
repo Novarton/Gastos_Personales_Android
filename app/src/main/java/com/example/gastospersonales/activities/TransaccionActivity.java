@@ -1,4 +1,5 @@
 package com.example.gastospersonales.activities;
+import android.graphics.Color;
 import android.os.Bundle;
 import com.example.gastospersonales.R;
 import androidx.appcompat.app.AppCompatActivity;
@@ -65,14 +66,15 @@ public class TransaccionActivity extends AppCompatActivity {
         // Listeners
         btnIncome.setOnClickListener(v -> {
             transactionType = "Ingreso";
-            btnIncome.setBackgroundResource(R.drawable.button_selected_background);
-            btnExpense.setBackgroundResource(R.drawable.button_save_background);
+            btnIncome.setBackgroundColor(Color.parseColor("#FF6347"));
+            btnExpense.setBackgroundColor(Color.parseColor("#FFBB86FC"));
+
         });
 
         btnExpense.setOnClickListener(v -> {
             transactionType = "Gasto";
-            btnIncome.setBackgroundResource(R.drawable.button_unselected_background);
-            btnExpense.setBackgroundResource(R.drawable.button_selected_background);
+            btnIncome.setBackgroundColor(Color.parseColor("#FFBB86FC"));
+            btnExpense.setBackgroundColor(Color.parseColor("#FFAC33"));
         });
 
         tvTransactionDate.setOnClickListener(v -> showDateTimeDialog());

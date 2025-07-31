@@ -21,7 +21,6 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="INGRESOS"
-            android:backgroundTint="@color/ingresosColor"
             android:textColor="@android:color/white"/>
 
         <Button
@@ -30,7 +29,6 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="GASTOS"
-            android:backgroundTint="@color/gastosColor"
             android:textColor="@android:color/white"/>
     </LinearLayout>
 
