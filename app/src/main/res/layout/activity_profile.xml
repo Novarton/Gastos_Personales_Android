@@ -132,16 +132,6 @@
                     android:layout_marginTop="16dp" />
             </LinearLayout>
 
-            <!-- Botón Cerrar Sesión -->
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="16dp"
-                android:backgroundTint="@color/red"
-                android:text="Cerrar Sesión"
-                android:textColor="@color/white" />
-
         </LinearLayout>
     </ScrollView>
 

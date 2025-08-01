@@ -68,7 +68,6 @@ public class HomeActivity extends AppCompatActivity {
                 updateTotalBalance();
                 return true;
             } else if (item.getItemId() == R.id.nav_profile) {
-                Toast.makeText(HomeActivity.this, "Navegar a Perfil", Toast.LENGTH_SHORT).show();
                 // Aquí podrías iniciar una nueva actividad de Perfil
                 startActivity(new Intent(this, ProfileActivity.class));
 
@@ -105,7 +104,7 @@ public class HomeActivity extends AppCompatActivity {
         transactionAdapter.updateTransactions(transactions);
         if (transactions.isEmpty()) {
             // Opcional: Mostrar un mensaje o imagen de "No hay transacciones"
-            // Toast.makeText(this, "No hay transacciones aún.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No hay transacciones aún.", Toast.LENGTH_SHORT).show();
         }
     }
 
