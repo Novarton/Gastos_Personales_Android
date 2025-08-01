@@ -16,6 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.example.gastospersonales.database.DBHelper;
 import com.example.gastospersonales.models.Transaccion;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -31,6 +33,9 @@ public class TransaccionActivity extends AppCompatActivity {
     private String transactionType = "Ingreso"; // Por defecto, Ingreso
     private DBHelper dbHelper;
     private Calendar calendar;
+
+    private BottomNavigationView bottomNavigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
